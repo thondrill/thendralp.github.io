@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Interrupted: Interactive Street Art Installation &amp; Chalk-Drawing Robot — Thendral Prabu</title>
+  <meta name="description" content="Robot Interrupted is an interactive street art installation at the Loop Arts Fest organized by the Chicago Loop Art Alliance, featuring a chalk-drawing robot with a touch screen interface for collective public artmaking.">
+  
+  <meta property="og:title" content="Robot Interrupted: Interactive Street Art Installation — Thendral Prabu">
+  <meta property="og:description" content="Interactive street art installation blending UX design, robotics, and visual design at Loop Arts Fest with the Chicago Loop Art Alliance.">
+  <meta property="og:image" content="assets/images/project_robot_interrupted.svg">
+  <link rel="icon" type="image/png" href="assets/images/thendral_icon.png">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-project-detail">
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="breadcrumb">
+        <a href="index.html" class="site-brand">Thendral Prabu</a>
+        <span class="crumb-separator">/</span>
+        <span class="crumb-current">Robot Interrupted</span>
+      </div>
+      
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#projects" class="nav-link active">Projects</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
+          CV <span class="ext-icon" aria-hidden="true">↗</span>
+        </a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="btnThemeToggle" aria-label="Toggle light and dark color mode" title="Toggle theme">
+          <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
+          <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <button type="button" class="mobile-menu-toggle" id="btnMobileMenu" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Container -->
+  <main class="project-container" id="main-content">
+    
+    <div class="project-back-nav">
+      <a href="index.html#projects" class="back-link">← Back to All Projects</a>
+    </div>
+
+    <!-- Project Hero Header -->
+    <header class="project-header">
+      <div class="project-eyebrow">
+        <span>Chicago Loop Art Alliance</span>
+        <span class="meta-separator">·</span>
+        <span>Loop Arts Fest (October 17)</span>
+        <span class="meta-separator">·</span>
+        <span>Public Street Art &amp; HRI</span>
+      </div>
+      <h1 class="project-main-title">Robot Interrupted: Interactive Street Art Installation &amp; Chalk-Drawing Robot</h1>
+      <p class="project-lead">
+        <em>Robot Interrupted</em> is an interactive street art installation designed to encourage passersby to engage with a robot drawing chalk art on the street. Debuting at the <strong>Loop Arts Fest</strong>, a one-day festival organized by the <strong>Chicago Loop Art Alliance</strong> on <strong>October 17</strong>, the installation features a touch screen interface for users to participate directly in the artmaking process. Attendees are encouraged to draw along with the robot, reminding people that art is a collective process and takes many forms by blending UX design, robotics, and visual design to build civic community engagement in an open public setting.
+      </p>
+
+      <!-- Structured Project Metadata -->
+      <div class="project-meta-grid">
+        <div class="meta-block">
+          <span class="meta-label">My Role</span>
+          <span class="meta-value">Usability Testing &amp; Interaction Design</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">Exhibition Venue</span>
+          <span class="meta-value">Loop Arts Fest (Oct 17) · Chicago Loop Art Alliance</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">Core Disciplines</span>
+          <span class="meta-value">UX Design, Robotics Design &amp; Visual Design</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">Team Members</span>
+          <span class="meta-value">Thendral Prabu, Muzammil Shaikh, Helly Patel</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">Faculty Mentors</span>
+          <span class="meta-value">LeAnne Wagner &amp; Umer Huzaifa, PhD</span>
+        </div>
+        <div class="meta-block">
+          <span class="meta-label">Technologies</span>
+          <span class="meta-value">Touch Screen Kiosk, Turtlebot, Python Backend, Chalk Mechanism</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Showcase Architecture Diagram -->
+    <figure class="project-hero-figure">
+      <img src="assets/images/project_robot_interrupted.svg" alt="System architecture diagram for Robot Interrupted showing Touch Screen UI, Python backend, Turtlebot hardware, and shared street canvas" class="lightbox-trigger" data-full="assets/images/project_robot_interrupted.svg" data-caption="Robot Interrupted: System Architecture &amp; Human-Robot Street Co-Creation Loop">
+      <figcaption class="figure-caption">System architecture: human stroke input on the touch screen interface is processed by the event-driven Python backend, translated into coordinate kinematics, and physically drawn on public pavement by the chalk-dispensing Turtlebot.</figcaption>
+    </figure>
+
+    <!-- Narrative Content -->
+    <article class="project-body prose">
+      
+      <!-- SECTION 1: VISION & FESTIVAL CONTEXT -->
+      <section class="case-section">
+        <h2>1. The Vision: Bringing Robotics to a Public Setting</h2>
+        <p>
+          Robotics research is frequently confined to academic laboratories, industrial manufacturing floors, or closed corporate demonstrations. For everyday citizens, encounters with autonomous machines are almost exclusively utilitarian—such as automated delivery rovers navigating sidewalks or commercial vacuum cleaners rolling across office floors.
+        </p>
+        <p>
+          <strong>Robot Interrupted</strong> fundamentally inverts this relationship. Designed as an interactive street art installation, the project brings robotics into the public realm to demystify emerging technology through playful, spontaneous co-creation. The robot will be part of the <strong>Loop Arts Fest</strong>, a vibrant one-day festival organized by the <strong>Chicago Loop Art Alliance</strong> on <strong>October 17</strong>.
+        </p>
+        <div class="callout-quote">
+          <blockquote>
+            "Robot Interrupted is an interactive street art installation designed to encourage passersby to engage with a robot drawing chalk art on the street. Attendees are encouraged to draw along with the robot, reminding people that art is a collective process and takes many forms."
+          </blockquote>
+          <cite>— Project Mission · Loop Arts Fest 2026</cite>
+        </div>
+        <p>
+          We chose <strong>chalk on city pavement</strong> as our physical medium deliberately. Chalk is tactile, ephemeral, nostalgic, and universally approachable. It eliminates the intimidation of making permanent errors and transforms public sidewalks into an open, democratic canvas where anyone—regardless of age, background, or artistic training—can participate.
+        </p>
+      </section>
+
+      <!-- SECTION 2: MULTIDISCIPLINARY TEAM & MENTORSHIP -->
+      <section class="case-section">
+        <h2>2. Multidisciplinary Team &amp; Faculty Mentorship</h2>
+        <p>
+          Creating an interactive installation that operates reliably in an unstructured outdoor environment requires close synthesis across UX design, robotics engineering, and visual interaction. Our team pairs graduate researchers across computing and design disciplines at DePaul University.
+        </p>
+        
+        <h3 style="font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; font-family: var(--font-sans); font-weight: 600;">Core Project Team</h3>
+        <div class="team-credits-grid">
+          
+          <div class="team-card">
+            <div class="team-card-header">
+              <div class="team-card-name">Thendral Prabu</div>
+              <div class="team-card-role">Usability Testing &amp; Interaction Design</div>
+            </div>
+            <div class="team-card-degree">M.S. Human Computer Interaction · 2027</div>
+            <p class="team-card-desc">
+              Spearheading field usability testing protocols, studying pedestrian approach dynamics, designing conversational and gestural touch interaction flows, and ensuring physical reach accessibility and safety in crowded public spaces.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card-header">
+              <div class="team-card-name">Muzammil Shaikh</div>
+              <div class="team-card-role">Robotics Design</div>
+            </div>
+            <div class="team-card-degree">M.S. Artificial Intelligence · 2026</div>
+            <p class="team-card-desc">
+              Engineering the mobile robotic platform, differential drive kinematics, mechanical servo-driven chalk dispensing actuator, obstacle telemetry, and real-time path execution across uneven street pavement.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card-header">
+              <div class="team-card-name">Helly Patel</div>
+              <div class="team-card-role">Interface Design</div>
+            </div>
+            <div class="team-card-degree">B.S. User Interaction · M.S. Human Computer Interaction · 2027</div>
+            <p class="team-card-desc">
+              Designing the user-facing touch screen interface in Figma, establishing high-contrast visual design tokens, building responsive drawing surfaces, and optimizing the multi-user onboarding flow for zero friction.
+            </p>
+          </div>
+
+        </div>
+
+        <h3 style="font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.75rem; font-family: var(--font-sans); font-weight: 600;">Faculty Mentors &amp; Lab Affiliations</h3>
+        <div class="team-credits-grid">
+
+          <div class="team-card mentor-card">
+            <div class="team-card-header">
+              <div class="team-card-name">LeAnne Wagner</div>
+              <div class="team-card-role">Faculty Mentor</div>
+            </div>
+            <div class="mentor-affiliation">
+              Director of PUSH Studio &amp; the SPARK Center<br>
+              Professional Lecturer, DePaul School of Design
+            </div>
+            <p class="team-card-desc" style="margin-top: 0.65rem;">
+              Advising on participatory design methodologies, public spatial engagement, and accessible creative systems that connect community members through emerging technology.
+            </p>
+          </div>
+
+          <div class="team-card mentor-card">
+            <div class="team-card-header">
+              <div class="team-card-name">Umer Huzaifa, PhD</div>
+              <div class="team-card-role">Faculty Mentor</div>
+            </div>
+            <div class="mentor-affiliation">
+              Director of Robotics and Assisted Locomotion (RAL) Lab<br>
+              Assistant Professor, DePaul School of Computing
+            </div>
+            <p class="team-card-desc" style="margin-top: 0.65rem;">
+              Guiding mobile robotics locomotion, kinematics translation, real-time sensor integration, and safety verification for autonomous agents deployed in human-dense environments.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: INTERFACE DESIGN -->
+      <section class="case-section">
+        <h2>3. Interface Design: Frictionless Touch Screen Interaction</h2>
+        <p>
+          In a bustling street festival setting like the Loop Arts Fest, passersby will not read tutorials or sign up for accounts. If an interaction requires more than five to ten seconds of orientation, potential participants simply walk away. Interface designer <strong>Helly Patel</strong> architected an intuitive, high-visibility touch screen interface tailored specifically for rapid public onboarding.
+        </p>
+        <p>
+          Key interface affordances include:
+        </p>
+        <ul>
+          <li><strong>Direct Touchscreen Canvas:</strong> A fluid drawing surface where participants can immediately sketch organic strokes, geometric loops, or letters with their fingers or an accessible stylus.</li>
+          <li><strong>Generative Prompt Modifiers:</strong> For passersby who feel self-conscious about drawing on a blank screen, the interface provides playful generative seeds—such as floral tessellations, rhythmic waveforms, and algorithmic spirals—that attendees can trigger and modify.</li>
+          <li><strong>Real-Time Spatial Preview:</strong> The touch interface displays a live overhead map reflecting the robot's physical coordinates, chalk reservoir status, and heading on the pavement, establishing immediate visual correspondence between screen input and physical motion.</li>
+          <li><strong>Inclusive Visual Tokens:</strong> Designed with high-contrast UI components compliant with WCAG AAA standards, large touch targets suitable for all hand sizes and motor abilities, and universal iconography that bypasses language barriers.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 4: USABILITY TESTING & INTERACTION DESIGN -->
+      <section class="case-section">
+        <h2>4. Usability Testing &amp; Interaction Design in the Wild</h2>
+        <p>
+          My primary focus as interaction designer and usability researcher is bridging the behavioral divide between curious passersby and an active mobile robot. Unlike a controlled lab study, conducting usability testing in the wild requires accounting for unpredictable pedestrian traffic, changing ambient lighting, background noise, and diverse social dynamics.
+        </p>
+        <p>
+          Our usability testing and interaction design methodology revolves around three core pillars:
+        </p>
+        <ul>
+          <li><strong>Pedestrian Approach &amp; Dwell Analysis:</strong> Evaluating how signage, visual cues on the touch screen, and the robot's mechanical mark-making draw pedestrian curiosity and convert fleeting foot traffic into active participants.</li>
+          <li><strong>Turn-Taking &amp; Co-Presence:</strong> Establishing clear communication protocols so users understand when the robot is listening to screen input, when it is translating strokes to pavement, and when it invites the participant to add their own physical chalk marks beside it.</li>
+          <li><strong>Physical Ergonomics &amp; Safety:</strong> Designing the physical kiosk setup so that wheelchair users, standing adults, and young children can comfortably reach the touch screen, while ensuring the mobile robot maintains a safe physical buffer zone with LiDAR proximity stops.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 5: ROBOTICS DESIGN & KINEMATICS -->
+      <section class="case-section">
+        <h2>5. Robotics Design &amp; Street Mark-Making</h2>
+        <p>
+          Led by <strong>Muzammil Shaikh</strong>, the robotics design addresses the complex physical challenge of translating digital strokes into continuous physical chalk marks on textured urban pavement:
+        </p>
+        <ul>
+          <li><strong>Mobile Robotic Base (Turtlebot):</strong> Utilizes a compact, differential drive mobile robot engineered for precise rotational positioning and safe, controlled locomotion in human-shared public plazas.</li>
+          <li><strong>Custom Servo-Driven Chalk Dispenser:</strong> A custom mechanical rig deploys chalk sticks using controlled downward spring tension. The mechanism can lift the chalk during transit to execute discontinuous lines without smudging previous drawings.</li>
+          <li><strong>Kinematic Stroke Translation:</strong> Digital coordinate arrays captured from the touch screen are parsed by an event-driven Python backend, smoothed using the Ramer-Douglas-Peucker algorithm, and converted into linear velocity ($v$) and angular velocity ($\omega$) vectors.</li>
+          <li><strong>Outdoor Surface Compensation:</strong> Street pavement possesses varying friction and micro-topography. Adaptive wheel-velocity control and odometry compensation ensure strokes maintain geometric fidelity across asphalt, pavers, and sidewalk concrete.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 6: THE "INTERRUPTED" DYNAMIC -->
+      <section class="case-section">
+        <h2>6. The "Interrupted" Dynamic: Art as a Collective Process</h2>
+        <p>
+          In conventional industrial automation and computer science, an "interruption" is treated as an exceptional error condition—a fault that stops execution. In <em>Robot Interrupted</em>, we intentionally redefine interruption as an essential gesture of community co-creation:
+        </p>
+        <ul>
+          <li><strong>Drawing Along With the Robot:</strong> Attendees at the Loop Arts Fest are invited not only to touch the screen, but also to grab physical sidewalk chalk and draw right alongside the robot on the street.</li>
+          <li><strong>Adaptive Path Redirection:</strong> When a participant draws a chalk line across the robot's intended path, sensory detectors recognize the physical mark and prompt the robot to either weave around it, incorporate it into its current drawing, or yield the turn.</li>
+          <li><strong>Celebrating Collective Art:</strong> The resulting sidewalk mural is never the sole product of an algorithm or an individual human; it is a living, multi-layered tapestry of collective creativity that demonstrates how art can take diverse, spontaneous forms.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 7: LOOP ARTS FEST & IMPACT -->
+      <section class="case-section">
+        <h2>7. Loop Arts Fest Exhibition &amp; Community Impact</h2>
+        <p>
+          The project blends UX design, robotics, and visual design to build civic engagement by bringing robotics directly to a public setting. Showcasing at the Loop Arts Fest on October 17 provides an invaluable real-world testbed to assess human-robot interaction in civic spaces, demonstrating that technology can foster human connection, play, and communal joy.
+        </p>
+        <div class="impact-metrics-row">
+          <div class="metric-card">
+            <span class="metric-big">Oct 17</span>
+            <span class="metric-label">Loop Arts Fest</span>
+            <span class="metric-sub">Organized by Chicago Loop Art Alliance</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-big">3 Fields</span>
+            <span class="metric-label">Interdisciplinary Blend</span>
+            <span class="metric-sub">UX design, robotics, and visual design</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-big">Collective</span>
+            <span class="metric-label">Community Engagement</span>
+            <span class="metric-sub">Inviting passersby to co-create street chalk art</span>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Project Navigation Footer -->
+    <nav class="project-footer-nav" aria-label="Browse Projects">
+      <div class="pnav-prev">
+        <span class="pnav-label">Previous Project</span>
+        <a href="theatrical-designs.html" class="pnav-title">← Theatrical Scenic Design</a>
+      </div>
+      <div class="pnav-next">
+        <span class="pnav-label">Next Project</span>
+        <a href="bci-art.html" class="pnav-title">Brain-Computer Interface Art System →</a>
+      </div>
+    </nav>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-text">
+        &copy; 2026 Thendral Prabu · Chicago, Illinois. Accessible Creative Technologist &amp; HCI Researcher.
+      </p>
+      <div class="footer-actions">
+        <a href="index.html" class="back-to-top">Home</a> · <a href="#main-content" class="back-to-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true" role="dialog" aria-label="Image Preview">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" id="btnLightboxClose" aria-label="Close image preview">✕</button>
+      <img src="" alt="" class="lightbox-image" id="lightboxImage">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
