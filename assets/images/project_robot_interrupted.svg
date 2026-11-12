@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #fcfbf9; }
+      .grid-line { stroke: #e8e6df; stroke-width: 1; stroke-dasharray: 4 4; }
+      .box { fill: #ffffff; stroke: #d5d3ca; stroke-width: 1.5; rx: 8px; }
+      .box-accent { fill: #f0f7ff; stroke: #0969da; stroke-width: 2; rx: 8px; }
+      .box-robot { fill: #fffaf5; stroke: #d97706; stroke-width: 2; rx: 8px; }
+      .title-text { font-family: 'Source Serif 4', Georgia, serif; font-size: 26px; font-weight: 700; fill: #1f2328; }
+      .subtitle-text { font-family: 'Inter', -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #57606a; letter-spacing: 0.08em; text-transform: uppercase; }
+      .header-text { font-family: 'Inter', -apple-system, sans-serif; font-size: 16px; font-weight: 600; fill: #1f2328; }
+      .body-text { font-family: 'Inter', -apple-system, sans-serif; font-size: 13px; fill: #57606a; line-height: 1.5; }
+      .mono-text { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #0969da; }
+      .flow-arrow { stroke: #0969da; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .chalk-path { stroke: #ea580c; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 6 3; }
+      .chalk-co { stroke: #0284c7; stroke-width: 4; fill: none; stroke-linecap: round; stroke-dasharray: 4 4; }
+      .tag { fill: #f2f0ea; stroke: #e3e0d6; stroke-width: 1; rx: 4px; }
+      .tag-text { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #42474e; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0969da"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" class="bg"/>
+
+  <!-- Subtle Blueprint Grid Lines -->
+  <line x1="80" y1="120" x2="1120" y2="120" class="grid-line"/>
+  <line x1="80" y1="360" x2="1120" y2="360" class="grid-line"/>
+  <line x1="80" y1="580" x2="1120" y2="580" class="grid-line"/>
+  <line x1="360" y1="100" x2="360" y2="600" class="grid-line"/>
+  <line x1="720" y1="100" x2="720" y2="600" class="grid-line"/>
+
+  <!-- Header Banner -->
+  <text x="80" y="58" class="subtitle-text">GRANT-FUNDED PUBLIC ART INSTALLATION · HUMAN-ROBOT INTERACTION (HRI)</text>
+  <text x="80" y="92" class="title-text">Robot Interrupted: System Architecture &amp; Co-Creation Loop</text>
+  <rect x="970" y="44" width="150" height="26" class="tag"/>
+  <text x="982" y="61" class="tag-text">STATUS: ACTIVE GRANT</text>
+
+  <!-- =========================================================================
+       NODE 1: FIGMA INTERFACE (HUMAN INPUT)
+       ========================================================================= -->
+  <g transform="translate(80, 140)">
+    <rect width="280" height="240" class="box-accent"/>
+    <!-- Card Header -->
+    <rect x="0" y="0" width="280" height="42" fill="#e8f2ff" rx="8" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0;"/>
+    <text x="16" y="26" class="header-text" fill="#0969da">1. Figma Interface</text>
+    <text x="180" y="26" class="mono-text">[Public UI]</text>
+    
+    <!-- UI Wireframe Mockup inside Card -->
+    <rect x="20" y="56" width="240" height="110" fill="#ffffff" stroke="#c7dcf7" rx="4"/>
+    <!-- Mock toolbar -->
+    <circle cx="36" cy="72" r="5" fill="#f87171"/>
+    <circle cx="50" cy="72" r="5" fill="#fbbf24"/>
+    <circle cx="64" cy="72" r="5" fill="#34d399"/>
+    <line x1="20" y1="84" x2="260" y2="84" stroke="#e2e8f0" stroke-width="1"/>
+    <!-- Canvas Drawing Mock -->
+    <path d="M 40 135 C 70 100, 110 150, 150 110 S 210 140, 230 115" stroke="#0969da" stroke-width="2.5" fill="none"/>
+    <circle cx="40" cy="135" r="3" fill="#0969da"/>
+    <circle cx="230" cy="115" r="3" fill="#0969da"/>
+    
+    <!-- Features Description -->
+    <text x="16" y="188" class="body-text">• Low-barrier mobile/tablet canvas</text>
+    <text x="16" y="208" class="body-text">• Vector stroke &amp; waypoint sampling</text>
+    <text x="16" y="228" class="mono-text">Output: JSON Vector Paths</text>
+  </g>
+
+  <!-- Connective Arrow 1 -> 2 -->
+  <path d="M 360 260 L 430 260" class="flow-arrow" marker-end="url(#arrow)"/>
+  <text x="368" y="248" class="mono-text" font-size="10">HTTP / REST</text>
+
+  <!-- =========================================================================
+       NODE 2: PYTHON BACKEND & TELEMETRY BRIDGE
+       ========================================================================= -->
+  <g transform="translate(440, 140)">
+    <rect width="300" height="240" class="box"/>
+    <!-- Card Header -->
+    <rect x="0" y="0" width="300" height="42" fill="#f3f4f6" rx="8" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0;"/>
+    <text x="16" y="26" class="header-text">2. Python Backend &amp; Bridge</text>
+    <text x="235" y="26" class="mono-text">[ROS/API]</text>
+
+    <!-- Code Block Visual -->
+    <rect x="16" y="56" width="268" height="110" fill="#1e293b" rx="4"/>
+    <text x="28" y="78" font-family="JetBrains Mono" font-size="11" fill="#38bdf8">def process_path(vector_nodes):</text>
+    <text x="40" y="96" font-family="JetBrains Mono" font-size="10" fill="#94a3b8"># Transform canvas coords</text>
+    <text x="40" y="112" font-family="JetBrains Mono" font-size="10" fill="#a5f3fc">coords = scale_to_meters(nodes)</text>
+    <text x="40" y="130" font-family="JetBrains Mono" font-size="10" fill="#fde047">publish_twist_cmd(coords)</text>
+    <text x="40" y="148" font-family="JetBrains Mono" font-size="10" fill="#86efac">manage_chalk_actuator(state=DOWN)</text>
+
+    <!-- Features Description -->
+    <text x="16" y="188" class="body-text">• Coordinate normalization &amp; scaling</text>
+    <text x="16" y="208" class="body-text">• Kinematic trajectory planning</text>
+    <text x="16" y="228" class="mono-text">Publishes: /cmd_vel + /chalk_actuator</text>
+  </g>
+
+  <!-- Connective Arrow 2 -> 3 -->
+  <path d="M 740 260 L 810 260" class="flow-arrow" marker-end="url(#arrow)"/>
+  <text x="746" y="248" class="mono-text" font-size="10">WiFi / ROS2</text>
+
+  <!-- =========================================================================
+       NODE 3: TURTLEBOT & CHALK MECHANISM
+       ========================================================================= -->
+  <g transform="translate(820, 140)">
+    <rect width="300" height="240" class="box-robot"/>
+    <!-- Card Header -->
+    <rect x="0" y="0" width="300" height="42" fill="#fef3c7" rx="8" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0;"/>
+    <text x="16" y="26" class="header-text" fill="#b45309">3. Turtlebot Hardware</text>
+    <text x="215" y="26" class="mono-text" fill="#b45309">[Robot Base]</text>
+
+    <!-- Schematic Drawing of Turtlebot -->
+    <g transform="translate(90, 60)">
+      <!-- Base Plates -->
+      <ellipse cx="60" cy="55" rx="55" ry="28" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+      <ellipse cx="60" cy="40" rx="50" ry="24" fill="#cbd5e1" stroke="#64748b" stroke-width="1.5"/>
+      <!-- Wheels -->
+      <rect x="2" y="44" width="8" height="24" rx="2" fill="#334155"/>
+      <rect x="110" y="44" width="8" height="24" rx="2" fill="#334155"/>
+      <!-- LiDAR sensor on top -->
+      <cylinder cx="60" cy="20" r="16" fill="#0f172a"/>
+      <rect x="46" y="16" width="28" height="14" rx="3" fill="#1e293b"/>
+      <circle cx="60" cy="23" r="5" fill="#ef4444"/>
+      <!-- Custom Chalk Arm Extension -->
+      <path d="M 85 45 L 115 75 L 115 90" stroke="#d97706" stroke-width="3" fill="none"/>
+      <!-- Chalk Piece touching ground -->
+      <rect x="111" y="90" width="8" height="14" rx="2" fill="#ea580c"/>
+    </g>
+
+    <!-- Features Description -->
+    <text x="16" y="188" class="body-text">• Differential drive mobile base</text>
+    <text x="16" y="208" class="body-text">• Custom mechanical chalk dispenser</text>
+    <text x="16" y="228" class="mono-text" fill="#b45309">Execution: Physical mark-making</text>
+  </g>
+
+  <!-- =========================================================================
+       NODE 4: THE SHARED CANVAS (CO-CREATION & INTERRUPTION)
+       ========================================================================= -->
+  <g transform="translate(80, 420)">
+    <rect width="1040" height="210" class="box" stroke="#cbd5e1"/>
+    <!-- Header -->
+    <rect x="0" y="0" width="1040" height="38" fill="#f8fafc" rx="8" style="border-bottom-left-radius: 0; border-bottom-right-radius: 0;"/>
+    <text x="20" y="24" class="header-text">4. Public Co-Creation Canvas (Sidewalk / Plaza Floor)</text>
+    <text x="800" y="24" class="mono-text">[Human-Robot Collaboration]</text>
+
+    <!-- Visual of Interrupted Chalk Art -->
+    <g transform="translate(40, 55)">
+      <!-- Concrete slab texture border -->
+      <rect x="0" y="0" width="460" height="130" fill="#f1f5f9" stroke="#e2e8f0" rx="4"/>
+      <text x="12" y="20" font-family="JetBrains Mono" font-size="10" fill="#94a3b8">PUBLIC PAVEMENT WORKSPACE</text>
+      
+      <!-- Robot Path (Orange) -->
+      <path d="M 25 105 Q 80 15, 150 70 T 260 85" class="chalk-path"/>
+      <text x="25" y="125" font-family="Inter" font-size="11" fill="#ea580c" font-weight="600">Robot Chalk Line</text>
+
+      <!-- Interrupted Point -->
+      <circle cx="260" cy="85" r="7" fill="#ef4444"/>
+      <line x1="260" y1="85" x2="295" y2="55" stroke="#ef4444" stroke-width="1.5"/>
+      <text x="300" y="55" font-family="JetBrains Mono" font-size="10" fill="#ef4444">INTERRUPTION POINT</text>
+      
+      <!-- Human Participant Co-Creation (Cyan) -->
+      <path d="M 260 85 C 310 120, 370 40, 430 75" class="chalk-co"/>
+      <text x="330" y="125" font-family="Inter" font-size="11" fill="#0284c7" font-weight="600">Human Co-Created Stroke</text>
+    </g>
+
+    <!-- Narrative explanation on the right side of canvas -->
+    <g transform="translate(530, 55)">
+      <text x="0" y="18" font-family="Inter" font-size="14" font-weight="600" fill="#1f2328">The "Interrupted" Dynamic:</text>
+      <text x="0" y="42" class="body-text">• Physical interruptions, pedestrian steps, and new participant marks actively</text>
+      <text x="0" y="62" class="body-text">  redirect the robot's trajectory, converting barriers into creative prompts.</text>
+      <text x="0" y="86" class="body-text">• Bridges non-expert public participants into meaningful physical robotics.</text>
+      <text x="0" y="110" class="mono-text">Outcome: Living collaborative artwork that evolves throughout the installation.</text>
+    </g>
+  </g>
+
+  <!-- Flow connecting Node 3 down to Node 4 -->
+  <path d="M 970 380 L 970 420" class="flow-arrow" stroke="#d97706" marker-end="url(#arrow-amber)"/>
+
+  <!-- Flow connecting Node 4 back to Node 1 (Feedback Loop) -->
+  <path d="M 80 525 C 40 525, 40 260, 80 260" class="flow-arrow" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <text x="25" y="390" class="mono-text" font-size="10" transform="rotate(-90 25 390)">CO-CREATION FEEDBACK LOOP</text>
+</svg>
+
