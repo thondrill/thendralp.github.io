@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brain-Computer Interface for Art Therapy &amp; Robotic Control — Thendral Prabu</title>
+  <title>Brain-Computer Interface and Gesture Control for Robotic Drawing</title>
   <meta name="description"
     content="Developing non-invasive EEG neural interfaces at PUSH Studio that allow people with limb differences to create digital art and control robotic assistive tools.">
 
@@ -78,11 +78,12 @@
         <span class="meta-separator">·</span>
         <span>Brain-Computer Interfaces &amp; Assistive Tech</span>
       </div>
-      <h1 class="project-main-title">Brain-Computer Interface for Art Therapy &amp; Robotic Control</h1>
+      <h1 class="project-main-title">Brain-Computer Interface and Gesture Control for Robotic Drawing &amp; Robotic
+        Control</h1>
       <p class="project-lead">
-        Developing and calibrating a non-invasive brain-computer interface (BCI) system that enables people with limb
-        differences to participate in digital art therapy and operate assistive robotic arms using electroencephalogram
-        (EEG) signals.
+        A year of research into whether a person without fine motor control could direct a drawing robot. After the EEG
+        headset proved too unreliable, the project moved to camera-based gesture tracking. This is an early-stage
+        feasibility study.
       </p>
 
       <!-- Structured Project Metadata -->
@@ -105,20 +106,10 @@
         </div>
         <div class="meta-block">
           <span class="meta-label">Technologies</span>
-          <span class="meta-value">EEG Signal Processing, Python, Robotic Arm Control, Sensory Feedback</span>
+          <span class="meta-value">Emotiv Insight EEG, Python, MediaPipe, DexArm</span>
         </div>
       </div>
     </header>
-
-    <!-- Main Showcase Visual -->
-    <figure class="project-hero-figure">
-      <img src="assets/images/about_push_bci.png"
-        alt="Brain-computer interface setup with EEG headset and interactive art software at PUSH Studio"
-        class="lightbox-trigger" data-full="assets/images/about_push_bci.png"
-        data-caption="PUSH Studio BCI Research: Electrode Setup &amp; Assistive Art Interface">
-      <figcaption class="figure-caption">PUSH Studio experimental laboratory: calibrating non-invasive EEG channels for
-        continuous motor imagery and artistic expression.</figcaption>
-    </figure>
 
     <!-- Narrative Content -->
     <article class="project-body prose">
@@ -126,77 +117,162 @@
       <section class="case-section">
         <h2>1. Context &amp; Purpose</h2>
         <p>
-          Creative expression through visual art provides well-documented psychological and therapeutic benefits.
-          However, individuals who have experienced amputations, spinal cord injuries, or congenital limb differences
-          often encounter physical barriers that prevent them from holding traditional brushes, stylus pens, or mouse
-          peripherals.
+          Creative expression through visual art has well-documented benefits. People who have experienced amputations,
+          spinal cord injuries, or limb differences often can’t hold a brush, stylus, or mouse in the usual way. This
+          project asks what drawing could look like if the input came from something other than the hands.
         </p>
         <p>
-          At <strong>PUSH Studio</strong>, our research team explores how emerging neural interfaces can dismantle these
-          barriers. We develop non-invasive brain-computer interfaces that translate intention into continuous digital
-          strokes, fluid color mixing, and physical robotic brush movements.
+          The project is inspired by Münßinger et al. and McClinton et al., who built BCI systems for making art in VR.
         </p>
-        <div class="callout-quote">
-          <blockquote>
-            "Currently building a brain-computer interface that lets people with limb differences make art. Emerging
-            technologies must be shaped around human agency, creative self-expression, and dignity."
-          </blockquote>
-          <cite>— Research Mission at PUSH Studio</cite>
+
+      </section>
+
+      <section class="case-section">
+        <h2>2. Where We Started</h2>
+        <p>
+          For the first year we worked with the Emotiv Insight, a consumer EEG headset. We read prior work on BCI and
+          robot-assisted art, tested possible commands, and built a Bezier curve tool so the Dexarm could draw smooth
+          lines. An early, formative interview with an art therapist shaped how we approached the work. We demonstrated
+          left and right control at DePaul’s Jarvis Innovation Showcase in May 2026. We then added push and pull, and
+          found the system could not reliably recognize four directions.
+        </p>
+      </section>
+
+
+      <section class="case-section">
+        <h2>3. Where We Are Now</h2>
+        <P>
+          After training the Emotiv Insight on additional directions, we found it could not reliably recognize four.
+          Data from partner labs told us that the Emotiv Epoc, the higher end hardware sold by Emotiv, is similarly
+          unreliable, and following this we have begun training MediaPipe models to pair gestural motion with the robot
+          arm.
+          We are now training gesture models that pair hand and face motion with the robot arm, using MediaPipe landmark
+          tracking as the base. The open questions are whether gestures can map to consistent drawing directions and
+          which ones are comfortable to hold for long.
+        </P>
+        </div>
+        <section class="figure-slider" aria-roledescription="carousel" aria-label="Training the gesture model">
+          <div class="slides">
+
+            <figure class="slide" aria-roledescription="slide" aria-label="2 of 3" hidden>
+              <img src="assets/images/mediapipe_gesture.png"
+                alt="Screenshot of the training interface showing gesture labels." width="1280" height="720"
+                loading="lazy">
+              <figcaption>Screenshot of the training interface showing gesture labels.
+              </figcaption>
+            </figure>
+
+            <figure class="slide" aria-roledescription="slide" aria-label="3 of 3" hidden>
+              <img src="assets/images/mediapipe_training.png" alt="Screenshot of MediaPipe's face landmark training."
+                width="1280" height="720" loading="lazy">
+              <figcaption>Screenshot of MediaPipe's face landmark training
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <div class="slider-controls">
+            <button type="button" class="prev" aria-label="Previous slide">&larr; Previous</button>
+            <span class="slide-count" aria-live="polite">1 of 3</span>
+            <button type="button" class="next" aria-label="Next slide">Next &rarr;</button>
+          </div>
+        </section>
+
+        <style>
+          .figure-slider {
+            max-width: 900px;
+            margin: 2rem auto;
+          }
+
+          .figure-slider .slide {
+            margin: 0;
+          }
+
+          .figure-slider .slide[hidden] {
+            display: none;
+          }
+
+          .figure-slider img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+
+          .figure-slider figcaption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+
+          .slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            gap: 1rem;
+          }
+
+          .slider-controls button {
+            padding: 0.5rem 1rem;
+            font: inherit;
+            cursor: pointer;
+          }
+
+          .slider-controls button:focus-visible {
+            outline: 3px solid currentColor;
+            outline-offset: 2px;
+          }
+        </style>
+
+        <script>
+          (function () {
+            const root = document.querySelector('.figure-slider');
+            const slides = Array.from(root.querySelectorAll('.slide'));
+            const count = root.querySelector('.slide-count');
+            const prev = root.querySelector('.prev');
+            const next = root.querySelector('.next');
+            let index = 0;
+
+            function show(i) {
+              index = (i + slides.length) % slides.length;
+              slides.forEach((s, n) => { s.hidden = n !== index; });
+              count.textContent = (index + 1) + ' of ' + slides.length;
+            }
+
+            prev.addEventListener('click', () => show(index - 1));
+            next.addEventListener('click', () => show(index + 1));
+
+            root.addEventListener('keydown', (e) => {
+              if (e.key === 'ArrowLeft') show(index - 1);
+              if (e.key === 'ArrowRight') show(index + 1);
+            });
+          })();
+        </script>
+
         </div>
       </section>
 
       <section class="case-section">
-        <h2>2. Technical Architecture &amp; Interaction Pipeline</h2>
-        <p>
-          The interaction system pairs a non-invasive multi-channel EEG headset with a custom Python processing
-          pipeline. The raw electrophysiological data is filtered to isolate motor imagery signals corresponding to
-          imagined hand movements and focused attentional states.
-        </p>
-        <p>
-          Core research and engineering challenges include:
-        </p>
-        <ul>
-          <li><strong>Minimizing Electrode Calibration Fatigue:</strong> Standard BCI setups require 20 to 45 minutes of
-            tedious calibration before a user can produce an initial input. We developed rapid adaptive calibration
-            routines that reduce onboarding time down to under 5 minutes.</li>
-          <li><strong>Signal Smoothing &amp; Intent Disambiguation:</strong> Translating noisy EEG voltage spikes into
-            smooth, intentional artistic strokes without frustrating lag or jitter.</li>
-          <li><strong>Multimodal Sensory Feedback:</strong> Providing gentle auditory and visual feedback that confirms
-            when an electrode channel has solid skin contact and when a threshold has been reached.</li>
-        </ul>
-      </section>
+        <h2>4. References</h2>
+        <P>
+          McClinton, W., Caprio, D., Laesker, D., Pinto, B., Garcia, S., & Andujar, M. (2019, May). P300-Based 3D
+          brain
+          painting in virtual reality. In Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing
+          Systems (pp. 1-6).
+          http://dl.acm.org/doi/10.1145/3290607.3312968 <br><br>
+          Münßinger, J. I., Halder, S., Kleih, S. C., Furdea, A., Raco, V., Hösle, A., & Kübler, A. (2010). Brain
+          Painting: First Evaluation of a New Brain–Computer Interface Application with ALS-Patients and Healthy
+          Volunteers. Frontiers in Neuroscience, 4. https://doi.org/10.3389/fnins.2010.00182 <br><br>
+          S. -P. Seo, M. -H. Lee, J. Williamson and S. -W. Lee, "Changes in Fatigue and EEG Amplitude during a
+          Longtime
+          Use of Brain-Computer Interface," 2019 7th International Winter Conference on Brain-Computer Interface
+          (BCI),
+          Gangwon, Korea (South), 2019, pp. 1-3, doi: 10.1109/IWW-BCI.2019.8737306.<br><br>
 
-      <section class="case-section">
-        <h2>3. Participatory Design with Target Users</h2>
-        <p>
-          In keeping with our inclusive design philosophy, research sessions are conducted alongside individuals with
-          upper limb differences. Rather than prescribing how an interface should behave, participants guide the mapping
-          of cognitive commands to brush thickness, stroke velocity, and color palette transitions.
-        </p>
-        <p>
-          Ongoing research directions include integrating assistive robotic arm endpoints that allow participants to
-          paint directly onto physical canvas, closing the loop between neural intentionality and physical medium.
-        </p>
-      </section>
 
-      <section class="case-section">
-        <h2>4. Research Summary &amp; Status</h2>
-        <div class="impact-metrics-row">
-          <div class="metric-card">
-            <span class="metric-big">Active</span>
-            <span class="metric-label">PUSH Studio Research</span>
-            <span class="metric-sub">Ongoing graduate work at DePaul University CDM</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-big">&lt; 5 min</span>
-            <span class="metric-label">Target Calibration</span>
-            <span class="metric-sub">Rapid calibration to reduce cognitive onboarding fatigue</span>
-          </div>
-          <div class="metric-card">
-            <span class="metric-big">Non-Invasive</span>
-            <span class="metric-label">Neural Interface</span>
-            <span class="metric-sub">Scalp-based electroencephalography (EEG) capture</span>
-          </div>
+        </P>
+        </div>
         </div>
       </section>
 
